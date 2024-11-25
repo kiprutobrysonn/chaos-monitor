@@ -138,40 +138,40 @@ class MonitorCli:
     def parse_args(self,args):
         
         if args.file_add:
-            print args.file_add
+            print(args.file_add)
             # Addition of file
             checksum_manager = ChecksumManager()
-            print checksum_manager.add_checksum_pair(args.file_add)
+            print (checksum_manager.add_checksum_pair(args.file_add))
 
         if args.file_remove:
-            print args.file_remove
+            print (args.file_remove)
             # Removal of file
             checksum_manager = ChecksumManager()
-            print checksum_manager.remove_checksum_pair(args.file_remove)
+            print (checksum_manager.remove_checksum_pair(args.file_remove))
 
         if args.list_files:
-            print args.list_files
+            print (args.list_files)
             # listing of checksum pairs
             checksum_manager = ChecksumManager()
-            print checksum_manager.get_checksum_pairs()
+            print (checksum_manager.get_checksum_pairs())
 
         if args.add_email:
-            print args.add_email
+            print (args.add_email)
             # addition of email
             recipient_manager = RecipientManager()
-            print recipient_manager.add_recipient(args.add_email)
+            print (recipient_manager.add_recipient(args.add_email))
 
         if args.remove_email:
-            print args.remove_email
+            print (args.remove_email)
             # removal of email
             recipient_manager = RecipientManager()
-            print recipient_manager.remove_recipient(args.remove_email)
+            print (recipient_manager.remove_recipient(args.remove_email))
 
         if args.list_emails:
-            print "listing emails"
+            print ("listing emails")
             # listing of emails
             recipient_manager = RecipientManager()
-            print recipient_manager.get_recipients()
+            print (recipient_manager.get_recipients())
 
         if args.start_daemon:
             #startinf daemon

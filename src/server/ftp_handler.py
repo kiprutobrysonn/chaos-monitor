@@ -9,7 +9,7 @@ import time
 class MyHandler(FTPHandler):
 
     def on_connect(self):
-        print "%s:%s connected" % (self.remote_ip, self.remote_port)
+        print ("%s:%s connected" % (self.remote_ip, self.remote_port))
 
     def on_disconnect(self):
         

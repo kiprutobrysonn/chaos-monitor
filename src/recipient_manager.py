@@ -147,7 +147,7 @@ class RecipientManager(TableManager):
                 "Recipient added: {}".format(recipient))
             return True
         except Exception as err:
-            print err
+            print(err)
             self.logger.log_generic_message(err)
             self.connection.rollback()
             return False
@@ -223,4 +223,4 @@ class RecipientManager(TableManager):
 
 if __name__ == '__main__':
     R = RecipientManager()
-    print R.add_element('anshul7@vt.edu')
+    print (R.add_element('anshul7@vt.edu'))

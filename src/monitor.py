@@ -53,7 +53,10 @@ class Monitor(Daemon):
 
             time.sleep(self.wakeup_time)
 
+    def main(self):
+            print("Starting Monitor")
 
+ 
 def control_monitor():
     """
     Control function for the checksum daemon. Provides an entry point to
@@ -67,7 +70,7 @@ def control_monitor():
         sys.argv[len(sys.argv) - 1] = sys.argv[
             len(sys.argv) - 1].replace("--", "")
     mon = Monitor("/tmp/chaosmonitor.pid", "Montitor")
-    mon.main()
+    mon.run()
 
 
 if __name__ == '__main__':

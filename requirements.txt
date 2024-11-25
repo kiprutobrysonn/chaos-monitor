@@ -1,4 +1,5 @@
 mysql-connector
 validate_email
 rsfile
-pydns
+dnspython
+

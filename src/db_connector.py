@@ -25,7 +25,7 @@ class DBConnector:
         except Exception as err:
             self.logger.log_generic_message(err)
 
-    def get_connection(self, user='root', passwd=''):
+    def get_connection(self, user='root', passwd='Password'):
         """
         Returns a valid connection to mysql database.
 
