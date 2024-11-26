@@ -222,9 +222,14 @@ class ChecksumManager(TableManager):
         for tup in tuples:
             print("Filename: %s AbsoluteFilename: %s Checksum: %s" %(tup.filename, tup.absolute_filename, tup.checksum))
 
+    def get_checksum_pairs(name):
+        pass
+
+
 
 
                     
+
 if __name__ == '__main__':
     c = ChecksumManager()
     c.delete_table()

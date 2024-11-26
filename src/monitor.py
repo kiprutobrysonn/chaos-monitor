@@ -21,7 +21,7 @@ class Monitor(Daemon):
     def setup(self):
         self.checksum_manager = ChecksumManager()
         self.calculator = ChecksumCalculator()
-        self.logger = Logger(__name__)
+        self.logger = Logger()
         self.wakeup_time = 5
 
     def run(self):
@@ -35,8 +35,8 @@ class Monitor(Daemon):
 
             for tup in tuples:
 
-                filename = pair[2]
-                checksum = pair[1]
+                filename = tup[2]
+                checksum = tup[1]
 
                 current_checksum = self.calculator.calculate_checksum(filename)
 

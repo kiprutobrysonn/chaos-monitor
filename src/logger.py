@@ -9,6 +9,8 @@ class Logger:
         logging.basicConfig(filename="ChaosMonitor.log", level=logging.DEBUG)
         self.log = logging.getLogger(__name__)
 
+
+
     def log_generic_message(self, message=""):
         self.log.debug(message)
         
